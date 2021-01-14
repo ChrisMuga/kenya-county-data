@@ -47,4 +47,8 @@ $counties=array(
       45 => 'KISII',
       46 => 'NYAMIRA',
       47 => 'NAIROBI' );
+      
+      for($i=1;$i<=count($counties);$i++){
+            
+      }
 ?>
