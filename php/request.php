@@ -52,6 +52,6 @@ $url='https://forms.iebc.or.ke';
 $requestdata=new RequestData();
 // for($i=1;$i<=count($counties);$i++){
       $response=$requestdata->RequestConstituencies(1,$url);
-      // print_r (($response));
+      print_r (($response));
 // }
 ?>
