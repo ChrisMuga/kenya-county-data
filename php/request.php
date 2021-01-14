@@ -55,7 +55,7 @@ $county_list=array();
 $county_ids=(array_keys($counties));
 foreach($county_ids as $county_id){
       $county_name=$counties[$county_id]; 
-      echo "County #$county_id==>$county_name\n";
+      echo "County #$county_id==>$county_name<br>";
       $county_data=array();          
       $county_data['name']=$county_name;
       $county_data['id']=$county_id;
