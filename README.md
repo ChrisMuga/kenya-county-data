@@ -1,5 +1,6 @@
-# kenya-county-data
-A tool that generates county information in JSON format
+# Kenya County Data
+
+A tool that generates county, constituency and ward information in JSON format
 
 [Ruby Documentation](ruby/README.md)
 
