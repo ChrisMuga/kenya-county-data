@@ -2,12 +2,12 @@
 
 ## Install Dependencies
 
-> ``` 
-   ruby  bundle install
+```ruby  
+   bundle install
   ```
 
 ## Run program
 
-> ``` 
-    ruby rake start 
-  ```
+```ruby 
+   rake start
+```
