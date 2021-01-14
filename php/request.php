@@ -54,9 +54,9 @@ $requestdata=new RequestData();
 $county_list=array();
 $county_ids=(array_keys($counties));
 foreach($county_ids as $county_id){
+      $county_name=$counties[$county_id]; 
       echo "$county_name\n";
-      $county_data=array();
-      $county_name=$counties[$county_id];           
+      $county_data=array();          
       $county_data['name']=$county_name;
       $county_data['id']=$county_id;
       $county_data['constituencies']=$requestdata->RequestConstituencies($county_id,$url);;
