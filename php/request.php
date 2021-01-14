@@ -1,4 +1,5 @@
 <?php
+include_once('RequestCounties.php');
 $counties=array(
       1 => 'MOMBASA',
       2 => 'KWALE',
@@ -47,8 +48,10 @@ $counties=array(
       45 => 'KISII',
       46 => 'NYAMIRA',
       47 => 'NAIROBI' );
-      
-      for($i=1;$i<=count($counties);$i++){
-            
-      }
+$url='https://forms.iebc.or.ke';
+$requestdata=new RequestData();
+// for($i=1;$i<=count($counties);$i++){
+      $response=$requestdata->RequestConstituencies(1,$url);
+      // print_r (($response));
+// }
 ?>
