@@ -1,4 +1,4 @@
-# Kenya Counties Information
+# Ruby
 
 ## Install Dependencies
 
