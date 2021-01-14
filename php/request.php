@@ -50,8 +50,23 @@ $counties=array(
       47 => 'NAIROBI' );
 $url='https://forms.iebc.or.ke';
 $requestdata=new RequestData();
-// for($i=1;$i<=count($counties);$i++){
-      $response=$requestdata->RequestConstituencies(1,$url);
-      print_r (($response));
-// }
+
+$county_list=array();
+$county_ids=(array_keys($counties));
+foreach($county_ids as $county_id){
+      echo "$county_name\n";
+      $county_data=array();
+      $county_name=$counties[$county_id];           
+      $county_data['name']=$county_name;
+      $county_data['id']=$county_id;
+      $county_data['constituencies']=$requestdata->RequestConstituencies($county_id,$url);;
+      $county_list[]=$county_data;
+} 
+// echo "<pre>";
+// print_r($county_list);
+$logFile = "output.json";
+$log = fopen($logFile,'a');
+fwrite($log, json_encode($county_list));
+fclose($log);
+echo "Success. File generated at ./output.json";
 ?>
