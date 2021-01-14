@@ -13,7 +13,7 @@ class RequestData{
         }   
     }
     public function RequestWards($constituency_code,$url){
-        $data= json_decode(file_get_contents($url."/constituency/".$county_code));
+        $data= json_decode(file_get_contents($url."/wards/".$constituency_code));
         $response=array();
         foreach($data as $element){
             $constituencies=(array)$element;
