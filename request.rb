@@ -35,8 +35,6 @@ class Request
       county_hash['id'] = county_id
       county_hash['name'] = all_counties[county_id]
 
-      counties_registry << county_hash
-
       puts "county ##{county_id} => #{all_counties[county_id]}"
 
       data = JSON.parse(body)
