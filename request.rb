@@ -42,7 +42,7 @@ class Request
       data = JSON.parse(body)
 
       constituencies = data['constituency'] || {}
-      puts 'xxxx ====>', constituencies.inspect
+      # puts 'xxxx ====>', constituencies.inspect
       constituency_ids = constituencies.length.positive? ? constituencies.keys : []
 
       constituencies_list = []
@@ -52,8 +52,8 @@ class Request
         constituencies_hash['id'] = constituency_id
         constituencies_hash['name'] = constituencies[constituency_id]
 
-        puts "====> ##{constituency_id}, #{constituencies[constituency_id
-]}"
+        # puts "====> ##{constituency_id}, #{constituencies[constituency_id]}"
+
         wards_url = wards_endpoint(constituency_id)
         wards_body = fetch(wards_url)
         wards_data = JSON.parse(wards_body)
@@ -67,7 +67,7 @@ class Request
           wards_hash['name'] = wards[ward_id]
 
           wards_list << wards_hash
-          puts wards[ward_id]
+          # puts wards[ward_id]
         end
         constituencies_hash['wards'] = wards_list
         constituencies_list << constituencies_hash
@@ -75,7 +75,7 @@ class Request
       county_hash['constituencies'] = constituencies_list
       counties_registry << county_hash
     end
-    puts 'Counties ===>', counties_registry
+    # puts 'Counties ===>', counties_registry
 
     File.write('output.json', counties_registry.to_json)
   end
